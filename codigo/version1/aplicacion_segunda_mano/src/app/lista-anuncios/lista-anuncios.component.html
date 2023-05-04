@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>lista de anuncios</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <button type="button" class="btn btn-primary" (click)="miPerfil()">Mi perfil</button>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <form>
+                <div class="mb-3">
+                     <label for="titulo" class="form-label">Buscar por titulo</label>
+                     <input type="text" class="form-control" id="titulo"  [(ngModel)]="titulo" name="titulo">
+                    
+                   </div>
+                   
+                   <button type="submit" class="btn btn-primary" (click)="aplicarFiltros()" >Aplicar filtros</button>
+                 </form>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>titulo</th>
+                            <th>descripcion</th>
+                            <th>precio</th>
+                            
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let anuncio of Anuncios">
+                            <td><i>{{anuncio.titulo}}</i></td>
+                            <td><i>{{anuncio.descripcion}}</i></td>
+                            <td><i>{{anuncio.precio}}</i></td>
+                            
+                           <td><a class="btn btn-info" [routerLink]="['/listaAnuncios', anuncio.id,
+                    'detallesAnuncio']"> Ver detalles </a> </td>
+
+                          <!--  <td><a class="btn btn-danger" (click)="borrar(usuario.id)">eliminar</a></td>-->
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>

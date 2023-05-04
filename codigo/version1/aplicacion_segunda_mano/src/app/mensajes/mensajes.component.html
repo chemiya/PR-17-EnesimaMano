@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>mensajes enviados</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>destino</th>
+                        <th>mensaje</th>
+                        
+                        
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mensaje of MensajesCreador">
+                        <td><i>{{mensaje.idDestino}}</i></td>
+                        <td><i>{{mensaje.contenido}}</i></td>
+                        
+                        
+                     
+
+                      <!--  <td><a class="btn btn-danger" (click)="borrar(usuario.id)">eliminar</a></td>-->
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>mensajes recibidos</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>destino</th>
+                        <th>mensaje</th>
+                        
+                        
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mensaje of MensajesDestino">
+                        <td><i>{{mensaje.idDestino}}</i></td>
+                        <td><i>{{mensaje.contenido}}</i></td>
+                        
+                        
+                     
+
+                      <!--  <td><a class="btn btn-danger" (click)="borrar(usuario.id)">eliminar</a></td>-->
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
