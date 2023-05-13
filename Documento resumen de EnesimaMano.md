@@ -2,7 +2,7 @@
 
 <ol>
 <h2><li>Resumen del proyecto</li></h2>
-<p>Esta aplicación servirá para publicar anuncios para vender objetos de usados. Los usuarios una vez se identifiquen podrán ver los últimos anuncios publicados y podrán filtrarlos por precio. Los usuarios podrán subir anuncios añadiendo fotos, un título, un precio y una descripción. Además los usuarios podrán editar sus anuncios publicados o eliminarlos.</p>
+<p>Esta aplicación servirá para publicar anuncios para vender objetos usados. Los usuarios una vez se identifiquen podrán ver los últimos anuncios publicados y podrán filtrarlos por precio. Los usuarios podrán subir anuncios añadiendo fotos, un título, un precio y una descripción. Además los usuarios podrán editar sus anuncios publicados o eliminarlos.</p>
 <h2><li>Aplicaciones similares</li></h2>
 <p>Destacan dos aplicaciones similares en las que se basará este proyecto:</p>
 <ul>
