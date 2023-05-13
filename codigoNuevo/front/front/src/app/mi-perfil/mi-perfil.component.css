@@ -1,0 +1,38 @@
+.linea{
+    border:3px solid #12E19C;
+    width:100%;
+}
+
+.col-responsive-modificada-fin{
+    display:flex;
+    
+    justify-content: end;
+    align-items: center;
+    
+}
+
+.col-responsive-modificada-inicio{
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+@media (max-width: 858px){
+
+    .col-responsive-modificada-fin{
+        display:flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .col-responsive-modificada-inicio{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+}

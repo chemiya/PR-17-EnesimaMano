@@ -1,0 +1,33 @@
+<section>
+
+
+
+    <div class="row-responsive">
+        <div class="col-responsive">
+            <p class="titulo-mediano">Anuncios favoritos</p>
+        </div>
+    </div>
+
+
+
+
+    <!--anuncios-->
+    <div class="row-responsive wrap-mio" *ngIf="!sinAnuncios">
+
+        <div class="col-responsive p-10-mio w-33-mio  " *ngFor="let anuncio of anuncios">
+            <app-carta-anuncio [anuncio]="anuncio"></app-carta-anuncio>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row-responsive" *ngIf="sinAnuncios">
+        <div class="col-responsive">
+            <h1 class="titulo-pequeno">No tienes ningún anuncio favorito</h1>
+        </div>
+    </div>
+</section>

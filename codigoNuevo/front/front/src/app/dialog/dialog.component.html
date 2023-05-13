@@ -1,0 +1,14 @@
+<div class="row-responsive p-20-mio">
+    <div class="col-responsive">
+        <div class="row-responsive">
+            <p>¿Deseas eliminar el anuncio "{{nombre}}"?</p>
+        </div>
+
+        <div class="row-responsive">
+            <button [mat-dialog-close]="true" class="m-10-mio si">Si</button><!--cierro y envio true-->
+            <button (click)="eliminarNo()" class="m-10-mio no">No</button>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,135 @@
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <fa-icon [icon]="faBars" class="boton-barras"></fa-icon>
+    </label>
+    <a href="#" class="enlace">
+        <img src="./../../assets/icono.png" alt="" class="logo">
+    </a>
+
+
+
+    <!--botones-->
+    <ul>
+
+        <li><a href="/favoritos">
+                <div class="row-responsive ">
+                    <fa-icon [icon]="faHeart" class="icono-menu-busqueda p-10-mio"></fa-icon>
+                    <p>Favoritos</p>
+                </div>
+            </a></li>
+        <li><a href="/miPerfil/usuario">
+                <div class="row-responsive  " *ngIf="!cargando">
+                    <img [src]="usuario.fotoRuta" class="imagen-usuario">
+                    <p>{{usuario.username}}</p>
+                </div>
+
+                <div class="row-responsive  " *ngIf="cargando">
+                    <p>Cargando...</p>
+                </div>
+
+            </a></li>
+        <li><a href="/crearAnuncio/nuevo">
+                <div class="row-responsive ">
+                    <fa-icon [icon]="faPlus" class="icono-menu-busqueda p-10-mio"></fa-icon>
+                    <p>Crear anuncio</p>
+                </div>
+
+            </a></li>
+
+        <li><a class="puntero" (click)="cerrarSesion()">
+                <div class="row-responsive ">
+                    <fa-icon [icon]="faCircleXmark" class="icono-menu-busqueda p-10-mio"></fa-icon>
+                    <p>Cerrar sesión</p>
+                </div>
+
+            </a></li>
+
+
+    </ul>
+</nav>
+
+
+
+
+<!--buscador-->
+<section class="buscador">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row-responsive ">
+            <div class="col-responsive w-50-mio ">
+
+
+                <div class="row-responsive mt-10-mio">
+                    <div class="col-responsive p-10-mio">
+                        <p class="texto-aplicacion">Precio mínimo</p>
+                        <input type="number" class="p-5-mio" formControlName="minimo" />
+                        <div *ngIf="submitted && f['minimo'].errors" class="alerta">
+                            <div *ngIf="f['minimo'].errors['required']">Introduce precio mínimo</div>
+
+                        </div>
+                    </div>
+                    <div class="col-responsive p-10-mio">
+                        <p class="texto-aplicacion">Precio máximo</p>
+                        <input type="number" class="p-5-mio" formControlName="maximo" />
+                        <div *ngIf="submitted && f['maximo'].errors" class="alerta">
+                            <div *ngIf="f['maximo'].errors['required']">Introduce precio máximo</div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row-responsive mt-10-mio">
+                    <button class="boton-aplicacion">Buscar</button>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</section>
+
+
+
+
+<!--resultados-->
+<section class="resultados mt-40-mio">
+    <div class="row-responsive">
+        <div class="col-responsive w-100-mio">
+            <h1 class="titulo-mediano">Últimos anuncios</h1>
+            <div class="linea"></div>
+        </div>
+    </div>
+
+
+    <div class="row-responsive wrap-mio" *ngIf="!sinAnuncios">
+
+        <div class="col-responsive p-10-mio w-25-mio" *ngFor="let anuncio of anuncios">
+            <app-carta-anuncio [anuncio]="anuncio"></app-carta-anuncio>
+
+        </div>
+
+
+    </div>
+
+    <div class="row-responsive wrap-mio" *ngIf="sinAnuncios">
+
+        <div class="col-responsive p-10-mio  ">
+            <p class="titulo-pequeno">No hay ningun anuncio publicado</p>
+
+        </div>
+
+
+    </div>
+
+    <div class="row-responsive wrap-mio" *ngIf="cargando">
+
+        <div class="col-responsive p-10-mio  ">
+            <p class="titulo-pequeno">Cargando anuncios...</p>
+
+        </div>
+
+
+    </div>
+</section>

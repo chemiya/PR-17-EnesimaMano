@@ -1,0 +1,17 @@
+.si{
+    background-color: red;
+    padding:10px;
+    color:white;
+    border: none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.no{
+    background-color:blue;
+    padding:10px;
+    color:white;
+    border: none;
+    border-radius:10px;
+    cursor:pointer;
+}

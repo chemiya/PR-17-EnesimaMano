@@ -1,0 +1,14 @@
+.entrada-etiqueta{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input{
+    font-size: 20px;
+   
+}
+
+.interior-foto{
+    display:flex;
+    flex-direction: column;
+}

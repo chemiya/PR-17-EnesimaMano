@@ -1,0 +1,50 @@
+<section>
+    <div class="row-responsive">
+        <div class="col-responsive-modificada-fin w-50-mio p-50-mio">
+            <img [src]="usuario.fotoRuta" class="imagen-mediana">
+        </div>
+
+
+        <!--datos-->
+        <div class="col-responsive-modificada-inicio w-50-mio p-50-mio">
+            <h1 class="titulo-mediano">{{usuario.username}}</h1>
+            <h1 class="titulo-pequeno mt-10-mio">{{usuario.nombre}}</h1>
+            <h1 class="titulo-pequeno mt-10-mio">{{usuario.email}}</h1>
+            <h1 class="titulo-pequeno mt-10-mio">{{usuario.telefono}}</h1>
+            <h1 class="titulo-pequeno mt-10-mio">{{usuario.ubicacion}}</h1>
+            <div class="boton mt-10-mio" *ngIf="botonEditar">
+                <button class="boton-aplicacion" (click)="editarPerfil()">Editar perfil</button>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+<!--anuncios-->
+<section>
+    <div class="row-responsive mt-100-mio">
+        <div class="col-responsive w-100-mio">
+            <h1 class="titulo-mediano">Anuncios publicados</h1>
+            <div class="linea"></div>
+        </div>
+    </div>
+
+    <div class="row-responsive wrap-mio" *ngIf="!avisoNinguno">
+        <div class="col-responsive p-10-mio w-25-mio  " *ngFor="let anuncio of anuncios">
+            <app-carta-anuncio [anuncio]="anuncio" ></app-carta-anuncio>
+             
+         </div>
+    </div>
+
+    <div class="row-responsive" *ngIf="avisoNinguno">
+        <div class="col-responsive p-10-mio   ">
+           <h1 class="titulo-pequeno">No hay publicado ningún anuncio</h1>
+             
+         </div>
+    </div>
+
+    
+</section>

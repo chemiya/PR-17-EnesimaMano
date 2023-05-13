@@ -1,0 +1,108 @@
+<section>
+
+
+    <div class="row-responsive ">
+        <div class="col-responsive w-75-mio barras ">
+
+
+
+
+            <!--parte de arriba-->
+            <div class="row-responsive-modificada">
+                <div class="col-responsive columna-arriba-fija ">
+                    <div class="usuario p-10-mio  w-100-mio  ">
+                        <img [src]="fotoRuta" class="imagen-usuario">
+                        <a (click)="detallesUsuario()" class="enlace-usuario">
+                            <h1>{{username}}</h1>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-responsive columna-arriba-fija " *ngIf="botonGuardarFavorito && !botonesCreador">
+                    <div class="boton-separado p-10-mio w-100-mio">
+                        <button class="boton-aplicacion" (click)="guardarFavorito(anuncio.id)">Guardar como
+                            favorito</button>
+                    </div>
+
+                </div>
+
+                <div class="col-responsive columna-arriba-fija " *ngIf="!botonGuardarFavorito && !botonesCreador">
+                    <div class="boton-separado p-10-mio w-100-mio">
+                        <button class="boton-aplicacion" (click)="eliminarFavorito()">Eliminar favorito</button>
+                    </div>
+
+                </div>
+
+                <div class="col-responsive columna-arriba-fija " *ngIf="botonesCreador">
+                    <div class="boton-separado p-10-mio w-100-mio">
+                        <button class="boton-aplicacion m-10-mio" (click)="eliminarAnuncio()">Eliminar anuncio</button>
+                        <button class="boton-aplicacion m-10-mio" (click)="editarAnuncio()">Editar anuncio</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <!--imagen-->
+            <div class="row-responsive mt-40-mio">
+                <div class="col-responsive">
+                    <img [src]="seleccionada" class="imagen-grande">
+                </div>
+            </div>
+
+            <div class="row-responsive mt-10-mio">
+                <div class="col-responsive p-10-mio">
+                    <button class="boton-aplicacion" (click)="anterior()">Anterior</button>
+                </div>
+                <div class="col-responsive p-10-mio">
+                    <button class="boton-aplicacion" (click)="siguiente()">Siguiente</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--datos-->
+            <div class="row-responsive mt-10-mio">
+                <div class="col-responsive">
+                    <h1 class="titulo-grande centrado">{{anuncio.titulo}}</h1>
+                </div>
+
+            </div>
+
+
+            <div class="row-responsive mt-10-mio ">
+                <div class="col-responsive">
+                    <h1 class="titulo-grande">{{anuncio.precio}}€</h1>
+                </div>
+
+            </div>
+
+            <div class="row-responsive mt-10-mio p-10-mio">
+                <div class="col-responsive">
+                    <h1 class="texto-secundario centrado">{{anuncio.descripcion}}</h1>
+                </div>
+
+            </div>
+
+
+            <div class="row-responsive mt-10-mio p-10-mio">
+                <div class="col-responsive">
+                    <h1 class="texto-secundario centrado">{{anuncio.datosEnvio}}</h1>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

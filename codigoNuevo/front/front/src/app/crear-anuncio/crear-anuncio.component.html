@@ -1,0 +1,137 @@
+<section>
+
+    <form [formGroup]="registerForm">
+        <div class="row-responsive">
+            <div class="col-responsive">
+                <h1 class="titulo-mediano">{{titulo}}</h1>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--entradas-->
+        <div class="row-responsive p-10-mio ">
+            <div class="col-responsive w-100-mio ">
+                <div class="entrada w-75-mio  mt-10-mio ">
+                    <p class="entrada-etiqueta">Título</p>
+                    <input type="text" class="w-100-mio p-5-mio" formControlName="titulo" />
+
+                    <div *ngIf="submitted && f['titulo'].errors" class="alerta">
+                        <div *ngIf="f['titulo'].errors['required']">El título es obligatorio</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row-responsive p-10-mio ">
+            <div class="col-responsive w-100-mio ">
+                <div class="entrada w-75-mio  mt-10-mio ">
+                    <p class="entrada-etiqueta">Precio</p>
+                    <input type="number" class="w-16-mio p-5-mio" formControlName="precio" />
+                    <div *ngIf="submitted && f['precio'].errors" class="alerta">
+                        <div *ngIf="f['precio'].errors['required']">El precio es obligatorio</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row-responsive p-10-mio ">
+            <div class="col-responsive w-100-mio ">
+                <div class="entrada w-75-mio  mt-10-mio ">
+                    <p class="entrada-etiqueta">Descripción</p>
+                    <textarea class="w-100-mio p-5-mio" formControlName="descripcion"></textarea>
+
+                    <div *ngIf="submitted && f['descripcion'].errors" class="alerta">
+                        <div *ngIf="f['descripcion'].errors['required']">La descripción es obligatoria</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row-responsive p-10-mio">
+            <div class="col-responsive w-100-mio ">
+                <div class="entrada w-75-mio  mt-10-mio ">
+                    <p class="entrada-etiqueta">Datos de envío</p>
+                    <textarea class="w-100-mio p-5-mio" formControlName="datosEnvio"></textarea>
+
+                    <div *ngIf="submitted && f['datosEnvio'].errors" class="alerta">
+                        <div *ngIf="f['datosEnvio'].errors['required']">Los datos de envío son obligatorios</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!--fotos-->
+        <div class="row-responsive p-10-mio">
+            <div class="col-responsive w-100-mio ">
+                <div class="entrada w-75-mio  mt-10-mio ">
+                    <p class="entrada-etiqueta">Fotos</p>
+                    <input type="file" (change)="selectFile($event)" *ngIf="titulo=='Crear anuncio'">
+                    <div class="alerta" *ngIf="avisoFotos">
+                        <div>Por favor, sube alguna foto</div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row-responsive mt-10-mio">
+            <div class="col-responsive w-100-mio">
+                <div class="entrada-fotos w-75-mio  mt-10-mio ">
+                    <img *ngFor="let url of urls" [src]="url" width="100" height="100" class="p-10-mio" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-responsive mt-10-mio">
+            <div class="col-responsive w-100-mio">
+                <div class="entrada-fotos w-75-mio  mt-10-mio ">
+                    <div class="eliminar-foto p-10-mio" *ngFor="let url of urlsModificar">
+                        <img [src]="url.foto.ruta" width="100" height="100" class="p-10-mio" />
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="row-responsive mt-40-mio p-10-mio">
+            <button class="boton-aplicacion" (click)="subirDefinitivo()">{{titulo}}</button>
+        </div>
+
+    </form>
+</section>

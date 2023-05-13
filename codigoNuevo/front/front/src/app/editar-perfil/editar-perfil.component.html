@@ -1,0 +1,74 @@
+<section>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row-responsive">
+            <div class="col-responsive">
+                <h1 class="titulo-mediano">Editar perfil</h1>
+            </div>
+        </div>
+
+        <div class="row-responsive mt-40-mio">
+            <!--foto-->
+            <div class="col-responsive w-50-mio">
+                <div class="interior-foto">
+                    <p class="entrada-etiqueta p-10-mio">Foto</p>
+                    <img [src]="usuario.fotoRuta" class="imagen-mediana">
+                    <input type="file" class="mt-10-mio" (change)="onFileChange($event)">
+                </div>
+
+            </div>
+
+
+            <!--entradas-->
+            <div class="col-responsive w-50-mio p-10-mio">
+                <div class="entrada w-75-mio  mt-10-mio">
+                    <p class="entrada-etiqueta">Nombre</p>
+                    <input type="text" class="w-100-mio p-5-mio" formControlName="nombre" />
+                    <div *ngIf="submitted && f['nombre'].errors" class="alerta">
+                        <div *ngIf="f['nombre'].errors['required']">El nombre es obligatorio</div>
+
+                    </div>
+                </div>
+
+                <div class="entrada w-75-mio  mt-10-mio">
+                    <p class="entrada-etiqueta">Contraseña</p>
+                    <input type="password" class="w-100-mio p-5-mio" formControlName="password" />
+                    <div *ngIf="submitted && f['password'].errors" class="alerta">
+                        <div *ngIf="f['password'].errors['required']">La contraseña es obligatoria</div>
+
+                    </div>
+                </div>
+
+                <div class="entrada w-75-mio  mt-10-mio">
+                    <p class="entrada-etiqueta">Email</p>
+                    <input type="text" class="w-100-mio p-5-mio" formControlName="email" />
+                    <div *ngIf="submitted && f['email'].errors" class="alerta">
+                        <div *ngIf="f['email'].errors['required']">El email es obligatorio</div>
+
+                    </div>
+                </div>
+
+                <div class="entrada w-75-mio  mt-10-mio">
+                    <p class="entrada-etiqueta">Teléfono</p>
+                    <input type="text" class="w-100-mio p-5-mio" formControlName="telefono" />
+                    <div *ngIf="submitted && f['telefono'].errors" class="alerta">
+                        <div *ngIf="f['telefono'].errors['required']">El teléfono es obligatorio</div>
+
+                    </div>
+                </div>
+
+                <div class="entrada w-75-mio  mt-10-mio">
+                    <p class="entrada-etiqueta">Ubicación</p>
+                    <input type="text" class="w-100-mio p-5-mio" formControlName="ubicacion" />
+                    <div *ngIf="submitted && f['ubicacion'].errors" class="alerta">
+                        <div *ngIf="f['ubicacion'].errors['required']">La ubicación es obligatoria</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-responsive mt-40-mio p-10-mio">
+            <button class="boton-aplicacion">Editar usuario</button>
+        </div>
+
+    </form>
+</section>

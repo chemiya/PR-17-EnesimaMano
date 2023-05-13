@@ -1,0 +1,220 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+
+
+.rojo{
+    background-color: red;
+}
+
+.verde{
+    background-color: green
+}
+
+.amarillo{
+    background-color: yellow;
+}
+
+.row-responsive{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+   
+}
+
+.col-responsive{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+   
+}
+
+.wrap-mio{
+    flex-wrap: wrap;
+}
+
+
+
+.w-100-mio{
+    width:100%;
+}
+
+
+
+.w-50-mio{
+    width:50%;
+}
+
+.w-33-mio{
+    width:33%;
+}
+
+.w-66-mio{
+    width:66%;
+}
+
+.w-16-mio{
+    width:16%;
+}
+
+.w-75-mio{
+    width:75%;
+}
+
+.titulo-grande{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.titulo-mediano{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.titulo-pequeno{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.texto-secundario{
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.texto-aplicacion{
+    font-size: 20px;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.p-5-mio{
+    padding:5px;
+}
+
+.p-10-mio{
+    padding:10px;
+}
+
+.p-20-mio{
+    padding:20px;
+}
+
+.p-50-mio{
+    padding:50px;
+}
+
+.mt-10-mio{
+    margin-top: 10px;
+}
+
+.mt-40-mio{
+    margin-top: 40px;
+}
+
+.mt-100-mio{
+    margin-top: 100px;
+}
+.m-10-mio{
+    margin:10px;
+}
+
+.imagen-grande{
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+    
+}
+
+.h-100{
+    height:100%;
+}
+
+.imagen-mediana{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.imagen-usuario{
+    width:  60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius:50%;
+    
+}
+
+.imagen-icono{
+   
+    height: 130px;
+    object-fit: cover;
+
+    
+}
+
+.alerta{
+    color:red;
+}
+
+
+
+.boton-aplicacion{
+    border-radius: 50px;
+    background-color: #12E19C;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color:black;
+    font-weight: bold;
+    transition:1s ease-out;
+    border:none;
+    cursor:pointer;
+}
+
+.boton-aplicacion:hover{
+    background-color: #11B780;
+    transform: scale(1.05);
+}
+
+
+
+
+@media only screen and (max-width:850px){
+    .row-responsive{
+        flex-direction: column;
+    }
+
+    .w-50-mio{
+        width:100%;
+    }
+
+    .w-75-mio{
+        width:100%;
+    }
+
+    .w-66-mio{
+        width:100%;
+    }
+
+    .w-16-mio{
+        width:50%;
+    }
+
+    .w-33-mio{
+        width:100%;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

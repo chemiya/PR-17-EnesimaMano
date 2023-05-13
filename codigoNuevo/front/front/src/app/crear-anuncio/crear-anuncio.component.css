@@ -1,0 +1,30 @@
+.entrada-etiqueta{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input{
+    font-size: 20px;
+   
+}
+
+textarea{
+    font-size: 20px;
+}
+
+.entrada-fotos{
+    display:flex;
+    justify-content: start;
+    
+}
+
+.eliminar-foto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mensaje-eliminar{
+    color:red;
+    cursor:pointer;
+}

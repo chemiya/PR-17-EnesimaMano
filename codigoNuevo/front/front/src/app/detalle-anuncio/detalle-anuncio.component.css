@@ -1,0 +1,32 @@
+.barras{
+    border-right: 3px solid #12E19C;
+    border-left: 3px solid #12E19C;
+}
+
+.usuario{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.boton-separado{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.columna-arriba-fija{
+    width:50%;
+}
+
+.row-responsive-modificada{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.enlace-usuario:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}

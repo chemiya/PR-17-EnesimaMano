@@ -1,0 +1,62 @@
+<body>
+
+    <section>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="row-responsive p-20-mio">
+                <div class="col-responsive">
+                    <img src="./../../assets/icono.png" class="imagen-icono">
+
+                </div>
+            </div>
+
+
+            <div class="row-responsive p-20-mio">
+                <div class="col-responsive w-50-mio">
+                    <div class="contenido">
+                        <h1 class="titulo-mediano">Identifícate para acceder a todos los productos</h1>
+                        <div class="mt-40-mio">
+                            <a class="enlace-registro" href="/registro">Si no tienes cuenta, puedes registrarte</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--entradas-->
+                <div class="col-responsive w-50-mio">
+                    <div class="entrada w-75-mio  mt-10-mio">
+                        <p class="entrada-etiqueta">Username</p>
+                        <input type="text" class="w-100-mio p-5-mio" formControlName="username" />
+                        <div *ngIf="submitted && f['username'].errors" class="alerta">
+                            <div *ngIf="f['username'].errors['required']">El username es obligatorio</div>
+
+                        </div>
+                    </div>
+
+                    <div class="entrada w-75-mio  mt-10-mio">
+                        <p class="entrada-etiqueta">Contraseña</p>
+                        <input type="password" class="w-100-mio p-5-mio" formControlName="password" />
+                        <div *ngIf="submitted && f['password'].errors" class="alerta">
+                            <div *ngIf="f['password'].errors['required']">La contraseña es obligatoria</div>
+                            <div *ngIf="f['password'].errors['minlength']">La contraseña debe tener al menos 6
+                                caracteres
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-responsive mt-40-mio" *ngIf="mensajeIncorrecto">
+                <p class="alerta">El usuario y la contraseña son incorrectos</p>
+            </div>
+
+            <div class="row-responsive mt-40-mio p-10-mio">
+                <button class="boton-aplicacion">Identificarse</button>
+            </div>
+
+
+        </form>
+    </section>
+</body>
