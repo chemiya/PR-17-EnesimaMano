@@ -347,7 +347,9 @@ Se han realizado bocetos con Figma con la idea básica de como será la aplicaci
 
 
 <h2><li>Resultado final: vídeo youtube y repositorio</li></h2>
-Repositorio Github:
+Repositorio Github: https://github.com/chemiya/PR-17-EnesimaMano
+
+Video Youtube: https://www.youtube.com/watch?v=bmUxqaZm-dI
 
 
 <h2><li>Conclusiones</li></h2>
